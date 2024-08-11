@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace MedievalGameEngine.Engine.Core.Contracts
 {
-    public interface ICoreComponent
+    public interface IEngine
     {
-        public void Execute();
+        public ICoreComponent ExecutionFlow { get; }
 
-        public ICoreComponent Next { get; set; }
     }
 }
