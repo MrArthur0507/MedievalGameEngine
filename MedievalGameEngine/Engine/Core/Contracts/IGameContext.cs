@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace MedievalGameEngine.Engine.Core.Contracts
 {
-    public interface ICoreComponent
+    public interface IGameContext
     {
-        public void Execute(IGameContext gameContext);
-
-        public ICoreComponent Next { get; set; }
+        LinkedList<string> inputs { get; set; }
     }
 }

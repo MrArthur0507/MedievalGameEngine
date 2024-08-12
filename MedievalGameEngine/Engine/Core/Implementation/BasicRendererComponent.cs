@@ -1,18 +1,22 @@
 ﻿using MedievalGameEngine.Engine.Core.Contracts;
+using MedievalGameEngine.Engine.Core.Implementation.Component;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MedievalGameEngine.Engine.Core.Implementation
 {
-    public class BasicRendererComponent : ICoreComponent
+    public class BasicRendererComponent : CoreComponent
     {
-        public void Execute()
+
+        public override void Execute(IGameContext gameContext)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Renderer");
+            ExecuteNext(gameContext);
         }
     }
 }

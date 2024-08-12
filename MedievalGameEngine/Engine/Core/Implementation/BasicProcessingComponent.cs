@@ -1,4 +1,5 @@
 ﻿using MedievalGameEngine.Engine.Core.Contracts;
+using MedievalGameEngine.Engine.Core.Implementation.Component;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace MedievalGameEngine.Engine.Core.Implementation
 {
-    public class BasicProcessingComponent : ICoreComponent
+    public class BasicProcessingComponent : CoreComponent
     {
-        public void Execute()
+        public override void Execute(IGameContext gameContext)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Proccess");
+            ExecuteNext(gameContext);
         }
     }
 }

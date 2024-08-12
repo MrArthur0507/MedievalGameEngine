@@ -10,5 +10,7 @@ namespace MedievalGameEngine.Engine.Core.Contracts
     {
         public ICoreComponent ExecutionFlow { get; }
 
+        public void Start();
+        public void Stop();
     }
 }
