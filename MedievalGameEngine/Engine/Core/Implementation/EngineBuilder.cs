@@ -1,4 +1,5 @@
 ﻿using MedievalGameEngine.Engine.Core.Contracts;
+using MedievalGameEngine.Factories.CoreComponentFactories.Contracts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,12 @@ namespace MedievalGameEngine.Engine.Core.Implementation
         private ICoreComponent EngineFlowFirstComponent;
         private ICoreComponent EngineFlowLastComponent;
         private IEngine EngineInstance;
+        public ICoreComponentFactory Defaults { get; }
 
+        public EngineBuilder(ICoreComponentFactory coreComponentFactory)
+        {
+            Defaults = coreComponentFactory;
+        }
 
         public void AddComponent(ICoreComponent component)
         {
